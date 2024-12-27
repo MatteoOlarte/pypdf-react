@@ -1,0 +1,33 @@
+.material-button.filled-button {
+	--button-bg-color: var(--md-color-primary);
+	--button-color: var(--md-color-on-primary);
+  --button-hover-bg-color: color-mix(in srgb, var(--button-bg-color) 90%, black);
+  --button-active-bg-color: color-mix(in srgb, var(--button-bg-color) 80%, black);
+
+	color: var(--button-color);
+	background-color: var(--button-bg-color);
+  border: 1px solid var(--button-bg-color);
+
+	&.button-primary {
+		--button-bg-color: var(--md-color-primary);
+		--button-color: var(--md-color-on-primary);
+	}
+
+	&.button-secondary {
+		--button-bg-color: var(--md-color-secondary);
+		--button-color: var(--md-color-on-secondary);
+	}
+
+	&.button-tertiary {
+		--button-bg-color: var(--md-color-tertiary);
+		--button-color: var(--md-color-on-tertiary);
+	}
+
+	&:hover:not(:disabled) {
+    background-color: var(--button-hover-bg-color);
+	}
+
+  &:active:not(:disabled) {
+    background-color: var(--button-active-bg-color);
+  }
+}

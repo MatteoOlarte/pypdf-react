@@ -1,0 +1,5 @@
+.layout {
+	width: 100%;
+	max-width: var(--mdc-theme-surface-maxwidth);
+	margin: 0 auto;
+}

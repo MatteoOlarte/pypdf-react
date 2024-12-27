@@ -1,0 +1,65 @@
+.signup-form {
+	--auth-form-margin: 0.5rem;
+	--auth-from-width: 500px;
+	--auth-form-border-color: #635c6f;
+	--auth-from-border-color-rgb: 99, 92, 111;
+	--auth-form-shadow-color: #9790a2;
+	--auth-form-shadow-color-rgb: 151, 144, 162;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+  background-color: var(--md-color-surface-low);
+}
+
+.from-dialog {
+  position: relative;
+  width: auto;
+  pointer-events: none;
+  margin: var(--auth-form-margin);
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - (var(--auth-form-margin) * 2));
+}
+
+.dialog-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  padding: 16px;
+  border-radius: 20px;
+  background: var(--md-color-surface-lowest);
+  border: 1px solid var(--md-color-outline-2);
+}
+
+.content-title {
+  font-family: var(--font-family-RobotoSlab);
+  color: var(--md-textcolor-1);
+  font-size: 1.75rem;
+}
+
+.content-subtitle {
+  font-family: var(--font-family-Roboto);
+  color: var(--md-textcolor-2);
+  font-size: 1.25rem;
+}
+
+.content-footer {
+  display: flex;
+}
+
+.content-header {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 480px) {
+  .from-dialog {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--auth-from-width);
+  }
+}

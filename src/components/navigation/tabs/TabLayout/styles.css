@@ -1,0 +1,68 @@
+nav.mdc-tablayout {
+	--mdc-tablayout-bg: var(--md-color-surface-low);
+	--mdc-tablayout-border-color: var(--md-color-outline-1);
+	--mdc-tabitem-bg: var(--md-color-surface-low);
+	--mdc-tabitem-active-bg: color-mix(in srgb, var(--mdc-tabitem-bg) 80%, var(--md-color-primary));
+	--mdc-tabitem-hover-bg: color-mix(in srgb, var(--mdc-tabitem-bg) 90%, black);
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	user-select: none;
+	background: var(--mdc-tablayout-bg);
+
+	&.layout-divider {
+		border-bottom: 1px solid color-mix(in srgb, var(--mdc-tablayout-border-color) 50%, transparent);
+	}
+}
+
+nav.mdc-tablayout > .mdc-tabitem {
+	position: relative;
+	flex-grow: 1;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	padding: 10px 10px 5px 10px;
+	background-color: var(--mdc-tabitem-bg);
+	transition: background-color 0.15s ease-in-out;
+	color: var(--md-textcolor-2);
+
+	& > svg {
+		width: 24px !important;
+		height: 24px !important;
+		fill: currentColor;
+	}
+
+	& > .tabitem-text {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	&:hover {
+		background-color: var(--mdc-tabitem-hover-bg);
+	}
+}
+
+nav.mdc-tablayout > .mdc-tabitem.active {
+	color: var(--md-color-primary);
+
+	&:hover {
+		background-color: var(--mdc-tabitem-active-bg);
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: 0px;
+		width: 50%;
+		height: 3px;
+		border-radius: 20px 20px 0 0;
+		translate: 50%;
+		background-color: var(--md-color-primary);
+	}
+}

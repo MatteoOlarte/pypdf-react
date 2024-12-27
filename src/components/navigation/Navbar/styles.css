@@ -1,0 +1,54 @@
+nav.navbar {
+	--bs-navbar-padding-x: 0;
+	--bs-navbar-padding-y: 1rem;
+	background-color: var(--md-color-surface-mid);
+	font-family: var(--font-family-RobotoSlab);
+
+	& > .container {
+		& > .auto {
+			width: 100%;
+			max-width: var(--mdc-theme-surface-maxwidth);
+			margin: 0 auto;
+		}
+	}
+
+	& .navbar-brand {
+		font-weight: 500;
+		font-family: var(--font-family-RobotoSlab);
+	}
+
+	& .navbar-nav {
+		& svg.icon {
+			fill: currentColor;
+			width: 1.6rem;
+			height: 1.6rem;
+		}
+		& a.nav-link {
+			font-family: var(--font-family-Roboto);
+		}
+	}
+
+	& .profile-card {
+		padding: 8px;
+		gap: 8px;
+		display: flex;
+		align-items: center;
+
+		& > img.profile-photo {
+			width: 24px;
+			aspect-ratio: 1/1;
+			border-radius: 100%;
+			border: 1px solid var(--md-color-outline-2);
+		}
+
+		& > svg.profile-photo {
+			width: 1.5rem !important;
+			height: 1.5rem !important;
+			fill: currentColor;
+		}
+
+		& > .profile-username {
+			font-family: var(--font-family-Roboto);
+		}
+	}
+}

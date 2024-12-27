@@ -1,0 +1,5 @@
+div.surface {
+  border-radius: 20px;
+  padding: 16px;
+  overflow: hidden;
+}

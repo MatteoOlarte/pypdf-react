@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+	--md-color-primary: rgb(78, 66, 0);
+	--md-color-primary-rgb: 78, 66, 0;
+	--md-color-on-primary: rgb(255 255 255);
+	--md-color-primary-container: rgb(132, 116, 38);
+	--md-color-on-primary-container: rgb(255 255 255);
+
+	--md-color-secondary: rgb(73, 67, 39);
+	--md-color-secondary-rgb: 73, 67, 39;
+	--md-color-on-secondary: rgb(255 255 255);
+	--md-color-secondary-container: rgb(125, 117, 85);
+	--md-color-on-secondary-container: rgb(255 255 255);
+
+	--md-color-tertiary: rgb(39, 74, 53);
+	--md-color-tertiary-rgb: 39, 74, 53;
+	--md-color-on-tertiary: rgb(255 255 255);
+	--md-color-tertiary-container: #597d64;
+	--md-color-on-tertiary-container: rgb(255 255 255);
+
+	--md-color-error: rgb(78, 0, 2);
+	--md-color-on-error: rgb(255 255 255);
+	--md-color-error-container: rgb(140 0 9);
+	--md-color-on-error-container: rgb(255 255 255);
+
+	--md-color-background: #fff9ec;
+	--md-color-surface-lowest: #ffffff;
+	--md-color-surface-low: #f9f3e5;
+	--md-color-surface-mid: #f4ede0;
+	--md-color-surface-high: #eee8da;
+	--md-color-surface-highest: #e8e2d4;
+	--md-textcolor-1: #1e1c13;
+	--md-textcolor-2: #464336;
+	--md-textcolor-3: #635f51;
+	--md-textcolor-4: #7f7b6b;
+	--md-color-outline-1: #635f51;
+	--md-color-outline-2: #7f7b6b;
+	--md-color-shadow: rgb(0 0 0);
+	--md-color-scrim: rgb(0 0 0);
+
+  --font-family-RobotoSlab: "Roboto Slab";
+	--font-family-Roboto: "Roboto";
+	--font-family-RobotoFlex: "Roboto Flex";
+  --font-family-RobotoMono: "Roboto Mono";
+	--mdc-theme-surface-maxwidth: 1350px;
+}
+
+* {
+	margin: 0;
+	font-family: var(--font-family-Roboto), sans-serif;
+}
+
+body {
+  background-color: var(--md-color-background);
+	color: var(--mdc-theme-on-surface-1);
+}
+
+.textcolor-1 {
+	color: var(--md-textcolor-1);
+}
+
+.textcolor-2 {
+	color: var(--md-textcolor-2);
+}
+
+.textcolor-3 {
+	color: var(--md-textcolor-3);
+}
+
+.textcolor-4 {
+	color: var(--md-textcolor-4);
+}
+
+.fs-md-RobotoSlab {
+	font-family: var(--font-family-RobotoSlab);
+}
+
+.fs-md-Roboto {
+	font-family: var(--font-family-Roboto);
+}
+
+.fs-md-RobotoFlex {
+	font-family: var(--font-family-RobotoFlex);
+}
+
+.form-control {
+
+}

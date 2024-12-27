@@ -1,0 +1,40 @@
+div.surface.surface-filled {
+  &.surface-lowest {
+    background-color: var(--md-color-surface-lowest);
+  }
+
+  &.surface-low {
+    background-color: var(--md-color-surface-low);
+  }
+
+  &.surface-mid {
+    background-color: var(--md-color-surface-mid);
+  }
+
+  &.surface-high {
+    background-color: var(--md-color-surface-high);
+  }
+
+  &.surface-highest {
+    background-color: var(--md-color-surface-highest);
+  }
+
+  &.surface-primary {
+    background-color: var(--md-color-primary-container);
+    color: var(--md-color-on-primary-container);
+  }
+
+  &.surface-secondary {
+    background-color: var(--md-color-secondary-container);
+    color: var(--md-color-on-secondary-container);
+  }
+
+  &.surface-tertiary {
+    background-color: var(--md-color-tertiary-container);
+    color: var(--md-color-on-tertiary-container);
+  }
+
+  & svg {
+    fill: currentColor;
+  }
+}
