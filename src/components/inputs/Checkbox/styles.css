@@ -1,0 +1,45 @@
+.mdc-checkbox {
+	padding: 5px 2px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	& > label {
+		color: var(--md-textcolor-1);
+		cursor: pointer;
+	}
+
+	& > input[type="checkbox"] {
+		width: 16px;
+		height: 16px;
+		margin-right: 0.8rem;
+		appearance: none;
+		border-radius: 2px;
+		border: 1px solid var(--md-color-outline-1);
+		cursor: pointer;
+		background-color: transparent;
+		position: relative;
+    box-shadow: none;
+    transition: box-shadow .15s ease-in-out;
+
+		&:checked {
+			background-color: var(--md-color-primary);
+		}
+
+		&:checked::after {
+			content: "✓"; /* Checkmark */
+			color: var(--md-color-on-primary);
+			font-size: 10.8px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:focus {
+			border-color: var(--md-color-primary-container);
+			outline: 0;
+			box-shadow: 0 0 0px 4px color-mix(in srgb, var(--md-color-primary-container) 30%, transparent);
+		}
+	}
+}

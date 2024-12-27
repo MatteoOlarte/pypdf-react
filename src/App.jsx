@@ -1,6 +1,7 @@
 import { useRoutes, BrowserRouter } from "react-router-dom";
 import { ApplicationProvider } from "./context/ApplicationContext";
 import { TaskProvider } from "./context/TaskContext";
+import { SplitContextProvider } from "./context/SplitContext";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import HomePage from "./pages/HomePage";
@@ -49,9 +50,11 @@ const PDFTask = ({ proccess }) => {
 			);
 		case ProccessNames.PDFSplit:
 			return (
-				<TaskProvider>
-					<PDFSplitPage></PDFSplitPage>
-				</TaskProvider>
+				<SplitContextProvider>
+					<TaskProvider>
+						<PDFSplitPage></PDFSplitPage>
+					</TaskProvider>
+				</SplitContextProvider>
 			);
 		case ProccessNames.PDFLock:
 			return (

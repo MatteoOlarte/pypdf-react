@@ -117,7 +117,6 @@ const UnlockErrorDialog = ({ visible = true }) => {
 	const handleOnClick = () => {
 		setShowDialog(false);
 	};
-	console.log("modal re draw");
 
 	return (
 		<MaterialModal

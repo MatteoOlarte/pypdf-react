@@ -155,9 +155,59 @@ export const TaskProvider = ({ children }) => {
 		}
 	};
 
+	const splitRangePDF = async (ranges, merge) => {
+		setProccessFailed(false);
+
+		try {
+			let params = new URLSearchParams();
+			let taskID = currentTask.pk;
+			let response;
+
+			ranges.forEach((range) => params.append("ranges", range));
+			params.append("task_id", taskID);
+			params.append("merge_after", merge);
+			response = await api.post(`/pdf-utilities/split/range?${params}`);
+			setCurrentTask(response.data);
+			setIsDownloadReady(true);
+			return true;
+		} catch (error) {
+			let xError = error.response.headers["x-error"];
+
+			console.log(error);
+			setProccessFailed(true);
+			setProccessMessage(xError);
+			return false;
+		}
+	};
+
+	const splitPagesPDF = async (pages, merge) => {
+		setProccessFailed(false);
+
+		try {
+			let params = new URLSearchParams();
+			let taskID = currentTask.pk;
+			let response;
+
+			pages.forEach((page) => params.append("pages", page));
+			params.append("task_id", taskID);
+			params.append("merge_after", merge);
+			response = await api.post(`/pdf-utilities/split/pages?${params}`);
+			setCurrentTask(response.data);
+			setIsDownloadReady(true);
+			return true;
+		} catch (error) {
+			let xError = error.response.headers["x-error"];
+
+			console.log(error);
+			setProccessFailed(true);
+			setProccessMessage(xError);
+			return false;
+		}
+	};
+
 	useEffect(() => {
-		// clearFiles();
-		// startTask();
+		clearFiles();
+		startTask();
 	}, []);
 
 	useEffect(() => {
@@ -180,6 +230,8 @@ export const TaskProvider = ({ children }) => {
 		mergePDF,
 		lockPDF,
 		unlockPDF,
+		splitRangePDF,
+		splitPagesPDF,
 	};
 
 	return <TaskContext.Provider value={values}>{children}</TaskContext.Provider>;
