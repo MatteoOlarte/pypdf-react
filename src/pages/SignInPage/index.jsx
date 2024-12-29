@@ -19,8 +19,6 @@ function SignInPage({}) {
 		e.preventDefault();
 		let isSuccess = await applicationContext.loginUser(email, password);
 
-		console.log(isSuccess);
-		
 		if (isSuccess == true) {
 			navigate("/");
 		}

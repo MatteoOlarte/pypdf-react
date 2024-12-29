@@ -201,7 +201,7 @@ const PagesConfig = () => {
 		<div className="container pt-3 pb-2">
 			<div className="mb-4">
 				{pages.map((_, index) => (
-					<div className="input-group">
+					<div className="input-group" key={index}>
 						<PagesPicker
 							index={index + 1}
 							key={index}
